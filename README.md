@@ -1,4 +1,3 @@
-[TDA_polygons.pdf](https://github.com/kamalrana7843/Landsifier/files/8098007/TDA_polygons.pdf)
 # Landsifier
 A python based library to estimate likely triggers of mapped landslides
 
