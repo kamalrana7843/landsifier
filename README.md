@@ -24,6 +24,6 @@ This method uses 3D shape of landslide by incorporating elevation data of landsl
 # Sample output of each one of the method
 ![sample_output_landsifier](https://user-images.githubusercontent.com/63171258/154713717-884bcc0e-0817-48ef-a3b4-973c335a4c26.png)
 
-
+# References
 
 
