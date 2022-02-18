@@ -12,7 +12,7 @@ This Method used seven geometric propeties of landslide polygon that have been f
 
 
 
-# Refrences
+# References
 1. Rana, K., Ozturk, U., & Malik, N. (2021). Landslide geometry reveals its trigger. Geophysical Research Letters, 48(4), e2020GL090848.
 2. Taylor, F. E., Malamud, B. D., Witt, A., & Guzzetti, F. (2018). Landslide shape, ellipticity and length‐to‐width ratios. Earth Surface Processes and Landforms, 43(15), 3164-3189.
 
