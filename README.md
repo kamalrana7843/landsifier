@@ -25,5 +25,6 @@ This method uses 3D shape of landslide by incorporating elevation data of landsl
 ![sample_output_landsifier](https://user-images.githubusercontent.com/63171258/154713717-884bcc0e-0817-48ef-a3b4-973c335a4c26.png)
 
 # References
+1. Rana, K., Ozturk, U., & Malik, N. (2021). Landslide geometry reveals its trigger. Geophysical Research Letters, 48(4), e2020GL090848.
 
 
