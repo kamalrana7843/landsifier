@@ -1,1 +1,1 @@
-# CNN based Method
+# Convolutional Neural Network based Method
