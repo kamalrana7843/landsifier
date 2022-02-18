@@ -1,6 +1,6 @@
 # Random Forest based Method
 
-This Method used seven geometric propeties of landslide polygon that have been found useful for landslide classification. These properties are--
+This Method used seven geometric propeties of landslide polygon that have been found useful for landslide classification. These properties are -
 
 1. Area (A) of landslide Polygon
 2. Perimetre (P) of Landslide Polygon
