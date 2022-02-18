@@ -1,4 +1,3 @@
-![190605-artificial-intelligence-i-think-therefore-i-am](https://user-images.githubusercontent.com/63171258/154713188-844d1472-48ad-4d65-b48b-9626197e2c9a.jpg)
 # Landsifier
 A python based library to estimate likely triggers of mapped landslides
 
@@ -21,6 +20,10 @@ This method convert landslide polygon data to landslide polygon Images. These co
 
 This method uses 3D shape of landslide by incorporating elevation data of landslides via SRTM 30 meters DEM.
 
-![190605-artificial-intelligence-i-think-therefore-i-am](https://user-images.githubusercontent.com/63171258/154713188-844d1472-48ad-4d65-b48b-9626197e2c9a.jpg)
+
+# Sample output of each one of the method
+![sample_output_landsifier](https://user-images.githubusercontent.com/63171258/154713717-884bcc0e-0817-48ef-a3b4-973c335a4c26.png)
+
+
 
 
