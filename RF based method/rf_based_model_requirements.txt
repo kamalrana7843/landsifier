@@ -1,9 +1,6 @@
-numpy
-matplotlib
-scipy
-shapely
-math
-random
-geopandas
-utm
-sklearn
+numpy >= 1.19.1
+matplotlib >= 3.0.2
+scipy >= 1.5.4
+shapely >=1.6
+geopandas >=0.6.1
+sklearn >=0.24.2
