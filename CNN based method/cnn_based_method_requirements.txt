@@ -4,4 +4,4 @@ scipy  >= 1.5.4
 shapely  >=1.6
 geopandas >=0.6.1
 sklearn >=0.24.2
-tensorflow 1.13.1
+tensorflow >= 1.13.1
