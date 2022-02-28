@@ -5,3 +5,5 @@ shapely  >=1.6
 geopandas >=0.6.1
 sklearn >=0.24.2
 tensorflow >= 1.13.1
+utm>=0.7.0
+
