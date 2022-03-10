@@ -146,10 +146,20 @@ def get_geometric_properties_landslide(poly_data,coord_lonlat,order_lonlat):
 def classify_inventory_rf(earthquake_inventory_features,rainfall_inventory_features,test_inventory_features):
     
     """
-    function to give probability of testing inventory belonging to earthquake and rainfall class
-    Input:(earthquake_inventory_features) is geometric features of known earthquake inventories landslides
-    Input:(rainfall_inventory_features) is geometric features of known rainfall inventories landslides
-    Input:(test_inventory_features) is geometric features of known testing inventory landslides    
+    Return: probability of testing inventory landslides belonging to earthquake and rainfall class.
+    
+    Parameters
+    ----------
+    
+    earthquake_inventory_features: array_like
+                                   geometric features of known earthquake inventories landslides
+                                   
+    rainfall_inventory_features: array_like
+                                 geometric features of known rainfall inventories landslides
+                                 
+    test_inventory_features: array_like
+                             geometric features of known testing inventory landslides  
+                             
     """
     
     earthquake_label=np.zeros((np.shape(earthquake_inventory_features)[0],1))
@@ -217,9 +227,12 @@ def classify_inventory_rf(earthquake_inventory_features,rainfall_inventory_featu
 def plot_geometric_results(predict_proba):
     
     """
-    
-     This function is for visualization of testing results
-     Input: (predict_proba) is probability of each landslide in inventory class belonging to earthuake and rainfall class.
+    Return: plot of landslide probabilities belong to earthquake and rainfall class and trigger prediction of entire landslide inventory 
+     
+    Parameters
+    ----------
+    predict_proba: array_like
+                   probability of each landslide in inventory class belonging to earthuake and rainfall class.
     
     """
     
