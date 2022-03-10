@@ -27,8 +27,12 @@ import time
 def read_shapefiles(path_filename):
     
     """
-        function to read shapefiles
-        Input of function is file path of shapefile
+    Return  read shapefile from file path
+    
+    
+    Parameters
+    ----------
+    path_filename: file path name
     
     """
     
