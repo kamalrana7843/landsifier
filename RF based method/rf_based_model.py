@@ -166,7 +166,7 @@ def get_geometric_properties_landslide(poly_data,coord_lonlat,order_lonlat):
 def classify_inventory_rf(earthquake_inventory_features,rainfall_inventory_features,test_inventory_features):
     
     """
-    Function to predict the trigger of landslides in testing inventory
+    function to predict the trigger of landslides in testing inventory
     
     
     Parameters
@@ -182,7 +182,7 @@ def classify_inventory_rf(earthquake_inventory_features,rainfall_inventory_featu
                              geometric features of known testing inventory landslides  
                              
     Return
-    ----------
+    ------
     
     predictions:array_like
                 probability of testing inventory landslides belonging to earthquake and rainfall class
@@ -255,11 +255,14 @@ def plot_geometric_results(predict_proba):
     
     
     """
+    function to visualize the trigger prediction of landslides in testing inventory
+    
      
     Parameters
     ----------
     predict_proba: array_like
                    probability of each landslide in inventory class belonging to earthuake and rainfall class.
+                   
                    
     Return
     -------
