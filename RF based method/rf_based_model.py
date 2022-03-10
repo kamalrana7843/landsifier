@@ -27,13 +27,17 @@ import time
 def read_shapefiles(path_filename):
     
     """
-    Return  read shapefile from file path.
+    function to read the shapefile from the local file path of landslide inventory
     
     
     Parameters
     ----------
     path_filename: str
                   path to local inventory shapefiles
+    
+    -------
+    Return:str
+           read shapefile from file path.
     
     """
     
@@ -44,12 +48,20 @@ def read_shapefiles(path_filename):
 def latlon_to_eastnorth(lonlat_polydata):
     
     """ 
-    Return  easting and northing coordinates of landslide polygon data when polygon data has longitude latitude coordinates 
+    function to convert the (longitude latitude) coordinates of polygons to (easting, northing) coordinates
+    
     
     Parameters
     -----------
     lonllat_polydata: array_like
                       longitude and latitude coordinates data.
+                      
+    Return
+    ------
+    east_north_polydata: array_like
+                         easting and northing coordinates of landslide polygon data when polygon data has longitude latitude coordinates 
+
+    
      
     """
      
@@ -63,7 +75,7 @@ def latlon_to_eastnorth(lonlat_polydata):
 def get_geometric_properties_landslide(poly_data,coord_lonlat,order_lonlat):
     
     """
-    Return   Geometric features of landslide polygon.
+    function to calculate the geometric properties of landslide polygon
     
     Parameters
     -----------
@@ -75,7 +87,14 @@ def get_geometric_properties_landslide(poly_data,coord_lonlat,order_lonlat):
                 True if inventory shapefile has polygon coordinates in lonlat otherwise False
                  
     order_lonlat: Boolean
-               True if point in input polygon shapefile is (lon, lat), False if (lat, lon)          
+               True if point in input polygon shapefile is (lon, lat), False if (lat, lon)  
+               
+               
+    Return
+    ---------
+    store_geometric_features_all_landslides: array_like
+                                             Geometric features of landslide polygon.
+           
     """
     
     store_geometric_features_all_landslides=[]    
@@ -147,7 +166,8 @@ def get_geometric_properties_landslide(poly_data,coord_lonlat,order_lonlat):
 def classify_inventory_rf(earthquake_inventory_features,rainfall_inventory_features,test_inventory_features):
     
     """
-    Return: probability of testing inventory landslides belonging to earthquake and rainfall class.
+    Function to predict the trigger of landslides in testing inventory
+    
     
     Parameters
     ----------
@@ -161,6 +181,12 @@ def classify_inventory_rf(earthquake_inventory_features,rainfall_inventory_featu
     test_inventory_features: array_like
                              geometric features of known testing inventory landslides  
                              
+    Return
+    ----------
+    
+    predictions:array_like
+                probability of testing inventory landslides belonging to earthquake and rainfall class
+                                                   
     """
     
     earthquake_label=np.zeros((np.shape(earthquake_inventory_features)[0],1))
@@ -227,14 +253,18 @@ def classify_inventory_rf(earthquake_inventory_features,rainfall_inventory_featu
     
 def plot_geometric_results(predict_proba):
     
+    
     """
-    Return: plot of landslide probabilities belong to earthquake and rainfall class and trigger prediction of entire landslide inventory 
      
     Parameters
     ----------
     predict_proba: array_like
                    probability of each landslide in inventory class belonging to earthuake and rainfall class.
-    
+                   
+    Return
+    -------
+    Visualization of landslide probabilities belong to earthquake and rainfall class and trigger prediction of entire landslide inventory 
+                
     """
     
     plt.rc('text', usetex=True)
