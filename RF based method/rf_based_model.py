@@ -32,7 +32,8 @@ def read_shapefiles(path_filename):
     
     Parameters
     ----------
-    path_filename: file path name
+    path_filename: str
+                  path to local inventory shapefiles
     
     """
     
