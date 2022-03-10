@@ -27,7 +27,7 @@ import time
 def read_shapefiles(path_filename):
     
     """
-    Return  read shapefile from file path
+    Return  read shapefile from file path.
     
     
     Parameters
@@ -41,7 +41,16 @@ def read_shapefiles(path_filename):
 
 
 def latlon_to_eastnorth(lonlat_polydata):
-    """ function to convert longitude latitude coordinates to easting and northing coordinates"""
+    
+    """ 
+    Return  easting and northing coordinates of landslide polygon data when polygon data has longitude latitude coordinates 
+    
+    Parameters
+    -----------
+    lonllat_polydata: array_like
+                      longitude and latitude coordinates data.
+     
+    """
      
     east_north_polydata=[]
     for i in range(np.shape(lonlat_polydata)[0]):
@@ -53,11 +62,20 @@ def latlon_to_eastnorth(lonlat_polydata):
 def get_geometric_properties_landslide(poly_data,coord_lonlat,order_lonlat):
     
     """
-      function to get geometric features of landslide polygon
-      Input: (poly_data) is readed landslide inventory shapefile
-      Input: (coord_lonlat) is True if inventory shapefile has polygon coordinates in lonlat otherwise False
-      Input: (order_lonlat) is True if point in input polygon shapefile is (lon, lat), False if (lat, lon)          
-   """
+    Return   Geometric features of landslide polygon.
+    
+    Parameters
+    -----------
+    
+    poly_data: readed shapefile
+               readed landslide inventory shapefile (output of read_shapefile function)
+              
+    coord_lonlat: Boolean
+                True if inventory shapefile has polygon coordinates in lonlat otherwise False
+                 
+    order_lonlat: Boolean
+               True if point in input polygon shapefile is (lon, lat), False if (lat, lon)          
+    """
     
     store_geometric_features_all_landslides=[]    
     for l in range((np.shape(poly_data)[0])):
