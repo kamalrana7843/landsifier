@@ -37,31 +37,49 @@ from tensorflow.keras.layers import BatchNormalization
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, ZeroPadding2D
 import random
 
-def read_shapefiles(path_filename):
+def read_shapefiles (path_filename):
     
     """
-        function to read shapefiles
-        Input of function is file path of shapefile
+    function to read the shapefile from the local file path of landslide inventory
+    
+  
+    Parameters:
+         :path_filename (str): path to local inventory shapefiles
+    
+    
+    Returns:
+         read shapefile from file path
     
     """
     
     return gpd.read_file(path_filename)
 
 
-def latlon_to_eastnorth(lonlat_polydata):
-    """ function to convert longitude latitude coordinates to easting and northing coordinates"""
-     
-    east_north_polydata=[]
-    for i in range(np.shape(lonlat_polydata)[0]):
-        u = utm.from_latlon(lonlat_polydata[i][1], lonlat_polydata[i][0])   ### (lat,lon) to (east,north)
-        east_north_polydata.append([u[0],u[1]])
-    east_north_polydata=np.asarray(east_north_polydata) 
-    return  east_north_polydata 
+def latlon_to_eastnorth (lonlat_polydata):
+    
+    """ 
+    function to convert the (longitude latitude) coordinates of polygons to (easting, northing) coordinates
+    
+    
+    Parameters:
+          :lonllat_polydata (array_like): 
+                             longitude and latitude coordinates data
+                      
+    Returns:
+            (array_like)
+            easting and northing coordinates of landslide polygon data when polygon data has longitude latitude coordinates
 
 def increase_resolution_polygon(data):
     """
-    function to increase the data points between two neighbour vertex of polygon
+    function to increase the data points between two neighbouring vertex of landslide polygon to get smooth images
     
+    Parameters:
+            :data (array_like):
+                               easting and northing coordinates data of landslide polygon
+     
+    Returns:
+            (array_like)
+            linear interpolated data of landslide polygon
     """
     N=100
     n=np.shape(data)[0]-1
@@ -81,11 +99,16 @@ def increase_resolution_polygon(data):
 def make_ls_images(poly_data,coord_lonlat,order_lonlat):
     
     """
-      function to convert landslide polygon to images
-      Input: (poly_data) is readed landslide inventory shapefile
-      Input: (coord_lonlat) is True if inventory shapefile has polygon coordinates in lonlat otherwise False
-      Input: (order_lonlat) is True if point in input polygon shapefile is (lon, lat), False if (lat, lon)          
-    """  
+    function to convert landslide polygon to images
+    
+    Parameters:
+          :poly_data :readed landslide inventory shapefile
+          :coord_lonlat (Boolean) : is True if inventory shapefile has polygon coordinates in lonlat otherwise False
+          :order_lonlat (Boolean): is True if point in input polygon shapefile is (lon, lat), False if (lat, lon)  
+                
+    Returns:
+        (array_like) Bnary pixels values of landslide polygon Image 
+    """   
     
     DATA=[]
     
@@ -138,6 +161,13 @@ def train_augment(train_data,train_label):
     This function is used to augment the training data by rotating image by 90, 180, 270 degree and flippong image horizontally and
     vertically
     
+    Parameters:
+              :train_data (array_like): training data
+              :train_label (array_like): training label
+    
+    Returns:
+           augmented training data and labels
+    
     
     """
     
@@ -174,9 +204,16 @@ def classify_inventory_cnn(earthquake_inventory_features,rainfall_inventory_feat
     
     """
     function to give probability of testing inventory belonging to earthquake and rainfall class
-    Input:(earthquake_inventory_features) is landslide images of known earthquake inventories landslides
-    Input:(rainfall_inventory_features) is landslide images of known rainfall inventories landslides
-    Input:(test_inventory_features) is landslide images of known testing inventory landslides    
+    
+    Parameters:
+        :earthquake_inventory_features (array_like): is landslide images of known earthquake inventories landslides
+        :rainfall_inventory_features (array_like): is landslide images of known rainfall inventories landslides
+        :test_inventory_features (array_like): is landslide images of known testing inventory landslides  
+                
+    Returns:
+            (array_like) probability of testing inventory landslides belonging to earthquake and rainfall class
+
+        
     """
     
     
@@ -263,10 +300,17 @@ def classify_inventory_cnn(earthquake_inventory_features,rainfall_inventory_feat
 def plot_geometric_results(predict_proba):
     
     """
+    function to visualize the trigger prediction of landslides in testing inventory
     
-     This function is for visualization of testing results
-     Input: (predict_proba) is probability of each landslide in inventory class belonging to earthquake and rainfall class.
-    
+     
+    Parameters:
+         :predict_proba (array_like): probability of each landslide in inventory class belonging to earthquake and rainfall class.
+                   
+                   
+    Returns:
+         Visualization of landslide probabilities belong to earthquake and rainfall class and trigger prediction of entire landslide 
+         inventory 
+                
     """
     
     plt.rc('text', usetex=True)
