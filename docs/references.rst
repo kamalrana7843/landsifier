@@ -25,7 +25,7 @@ You can use the following BibTeX entry:
 Funding:
 ----------
 The development of ``Landsifier``  is supported by Co-PREPARE project (No: 57553291) by ``German Academic Exchange Service (DAAD)`` 
-and Chester F Carlson Centre for Imaging, ``Rochester Institute of technology``.
+and Chester F Carlson Centre for Imaging Science, ``Rochester Institute of technology``.
 
 Authors:
 ------------
