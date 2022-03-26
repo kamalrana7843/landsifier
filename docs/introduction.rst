@@ -14,6 +14,7 @@ This method is based on using 2D landslide polygon geometric properties for clas
 
 Sample landslide polygons
 --------------------------
+The below plot shows the sample landslide polygons of earthquake and rainfall-induced inventories
 
 .. image:: https://user-images.githubusercontent.com/63171258/160248721-85ff4e9c-56a3-4c56-9a24-eabbde9300e5.png
    :width: 1200 
