@@ -30,7 +30,7 @@ and Chester F Carlson Centre for Imaging, ``Rochester Institute of technology``.
 Authors:
 ------------
 
-- Kamal Rana: Visiting Researcher at GFZ German Research Centre for Geosciences, Germany and fourth year PhD year at Chester F Carlson Centre for Imaging Science, Rochester Institute of Technology, USA.
+- Kamal Rana: Visiting Researcher at GFZ German Research Centre for Geosciences, Germany and fourth year PhD student at Chester F Carlson Centre for Imaging Science, Rochester Institute of Technology, USA.
 
 - Nishant Malik: Professor at School of Mathematical Sciences, Rochester Institute of Technology, New York, USA.
 
