@@ -32,6 +32,7 @@ Contact Us:
 
 - Kamal Rana: Visiting Researcher at GFZ German Research Centre for Geosciences, Germany and fourth year PhD year at Chester F Carlson Centre for Imaging Science, Rochester Institute of Technology, USA.
 
-- Nishant Malik: Professor at School of Mathematical Sciences, Rochester Institute of Technology, USA. 
+- Nishant Malik: Professor at School of Mathematical Sciences, Rochester Institute of Technology, New York, USA.
+
 
 - Ugur Ozturk: Scientist at GFZ German Research Centre for Geosciences and University of Potsdam, Germany
