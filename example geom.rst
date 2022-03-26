@@ -4,6 +4,8 @@ Geometric Feature-Based Method Example
 This method is based on using 2D landslide polygon shape properties for classification. 
 This method calculates various geometric properties of landslide polygon and based on these geometric properties it classify triggers of landslide.
 
+.. image:: images/get_started_sphinx.png
+   :width: 600
 
 Import geometric features based module functions from Landsifier library 
 ------------------------------------------------------------------------
