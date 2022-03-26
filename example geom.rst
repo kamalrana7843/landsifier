@@ -4,8 +4,7 @@ Geometric Feature-Based Method Example
 This method is based on using 2D landslide polygon shape properties for classification. 
 This method calculates various geometric properties of landslide polygon and based on these geometric properties it classify triggers of landslide.
 
-.. image:: images/get_started_sphinx.png
-   :width: 600
+
 
 Import geometric features based module functions from Landsifier library 
 ------------------------------------------------------------------------
@@ -88,6 +87,9 @@ Visualization of the classification results
 .. code:: ipython3
 
     plot_geometric_results(predict_probability_hokkaido)
+    
+.. image:: https://user-images.githubusercontent.com/63171258/154713717-884bcc0e-0817-48ef-a3b4-973c335a4c26.png
+   :width: 1200    
         
 - Case 2: Iwata (Earthquake -triggerd) is a testing inventory 
 
@@ -108,6 +110,9 @@ Visualization of the classification results
 
     plot_geometric_results(predict_probability_iwata)
     
+.. image:: https://user-images.githubusercontent.com/63171258/154713717-884bcc0e-0817-48ef-a3b4-973c335a4c26.png
+   :width: 1200       
+    
 - Case 3: Niigata (Earthquake -triggerd) is a testing inventory 
 
 Training the algorithm on rest five inventories and test it on Iwata inventory.
@@ -127,6 +132,9 @@ Visualization of the classification results
 .. code:: ipython3
 
      plot_geometric_results(predict_probability_niigata)
+
+.. image:: https://user-images.githubusercontent.com/63171258/154713717-884bcc0e-0817-48ef-a3b4-973c335a4c26.png
+   :width: 1200   
      
 - Case 4: Kumamoto (Rainfall -triggerd) is a testing inventory 
 
@@ -145,6 +153,9 @@ Visualization of the classification results
 .. code:: ipython3
 
      plot_geometric_results(predict_probability_kumamoto)
+  
+.. image:: https://user-images.githubusercontent.com/63171258/154713717-884bcc0e-0817-48ef-a3b4-973c335a4c26.png
+   :width: 1200     
      
 - Case 5: Fukuoka (Rainfall -triggerd) is a testing inventory 
 
@@ -163,6 +174,9 @@ Visualization of the classification results
 .. code:: ipython3
 
     plot_geometric_results(predict_probability_fukuoka)
+ 
+.. image:: https://user-images.githubusercontent.com/63171258/154713717-884bcc0e-0817-48ef-a3b4-973c335a4c26.png
+   :width: 1200    
     
 - Case 6: Saka (Rainfall -triggerd) is a testing inventory 
 
@@ -182,7 +196,8 @@ Visualization of the classification results
 
     plot_geometric_results(predict_probability_saka)    
     
-  
+.. image:: https://user-images.githubusercontent.com/63171258/154713717-884bcc0e-0817-48ef-a3b4-973c335a4c26.png
+   :width: 1200     
     
 
 
