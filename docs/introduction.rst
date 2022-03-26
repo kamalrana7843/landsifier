@@ -10,7 +10,31 @@ The Beta version of library consitute three machine learning based method for fi
 
 1. Geometric feature based method
 ==================================
-This method is based on using 2D landslide polygon shape properties for classification. This method calculates various geometric properties of landslide polygon and based on these geometric properties it classify trigger of landslide inventories
+This method is based on using 2D landslide polygon geometric properties for classification. This method calculates various geometric properties of landslide polygon and these geometric properties are used as a feature space for machine learning based algorithm. 
+
+Sample landslide polygons
+--------------------------
+
+.. image:: https://user-images.githubusercontent.com/63171258/160248661-e740be89-f7c8-40d6-896b-239b744d9561.png
+   :width: 1200 
+
+Geometric properties of landslide polygon
+-----------------------------------------
+
+.. image:: https://user-images.githubusercontent.com/63171258/160248555-f38d8d88-0901-4ec9-9f81-ef57b3f8d12f.png
+   :width: 1200 
+
+
+The geometric properties of landslide polygons used are:-
+
+- Area (A) of landslide Polygon
+- Perimetre (P) of Landslide Polygon
+- Ratio of Area (A) to Perimetre(P)
+- Convex hull based measures (Ratio of area of polygon to area of convex hull fitted to polygon)
+- Width of minimum area bounding box fitted to polygon
+- Eccentricity of ellipse fitted to polygon having area A and perimetre P
+- minor-axis of ellipse fitted to polygon having area A and perimetre P
+
 
 
 2. Topological feature based method
