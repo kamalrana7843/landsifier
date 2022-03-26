@@ -14,7 +14,7 @@ This method is based on using 2D landslide polygon geometric properties for clas
 
 Sample landslide polygons
 --------------------------
-The below plot shows the sample landslide polygons of earthquake and rainfall-induced inventories
+The below plot shows the sample landslide polygons of earthquake and rainfall-induced inventories.
 
 .. image:: https://user-images.githubusercontent.com/63171258/160248721-85ff4e9c-56a3-4c56-9a24-eabbde9300e5.png
    :width: 1200 
@@ -31,6 +31,8 @@ The geometric properties of landslide polygons used are:-
 - Width of minimum area bounding box fitted to polygon
 - Eccentricity of ellipse fitted to polygon having area A and perimetre P
 - minor-axis of ellipse fitted to polygon having area A and perimetre P
+
+The below plot shows the various geometric properties of landslide polygon
 
 .. image:: https://user-images.githubusercontent.com/63171258/160248555-f38d8d88-0901-4ec9-9f81-ef57b3f8d12f.png
    :width: 1200 
