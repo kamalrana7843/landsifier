@@ -15,15 +15,11 @@ This method is based on using 2D landslide polygon geometric properties for clas
 Sample landslide polygons
 --------------------------
 
-.. image:: https://user-images.githubusercontent.com/63171258/160248661-e740be89-f7c8-40d6-896b-239b744d9561.png
+.. image:: https://user-images.githubusercontent.com/63171258/160248721-85ff4e9c-56a3-4c56-9a24-eabbde9300e5.png
    :width: 1200 
 
 Geometric properties of landslide polygon
 -----------------------------------------
-
-.. image:: https://user-images.githubusercontent.com/63171258/160248555-f38d8d88-0901-4ec9-9f81-ef57b3f8d12f.png
-   :width: 1200 
-
 
 The geometric properties of landslide polygons used are:-
 
@@ -34,6 +30,12 @@ The geometric properties of landslide polygons used are:-
 - Width of minimum area bounding box fitted to polygon
 - Eccentricity of ellipse fitted to polygon having area A and perimetre P
 - minor-axis of ellipse fitted to polygon having area A and perimetre P
+
+.. image:: https://user-images.githubusercontent.com/63171258/160248555-f38d8d88-0901-4ec9-9f81-ef57b3f8d12f.png
+   :width: 1200 
+
+
+
 
 
 
