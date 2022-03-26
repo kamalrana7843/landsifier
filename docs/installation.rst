@@ -6,7 +6,7 @@ Installation
 Dependencies
 ************
 
-The latest stable version of ``Landsifier`` requires:
+The Beta version version of ``Landsifier`` requires:
 
 - NumPy (>= 1.19.1)
 - Matplotlib (>= 3.0.2)
