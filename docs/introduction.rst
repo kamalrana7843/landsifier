@@ -57,14 +57,16 @@ The below plot shows the various geometric properties of landslide polygon
 2. Topological feature based method
 ====================================
 
-This method convert landslide polygon data to landslide polygon Images. These converted landslide images are used as a input to CNN for landslide classification
-
+This method convert 2D landslide polygon to 3D landslide shape by including elevation information.``Landsifier`` library compute topological
+features of 3D landslide shape use topological data analysis. These topological features can be used in machine learning algorithm for landslide triggers
+classification.
 
 
 3.Image based method
 =====================
 
-This method convert landslide polygon data to landslide polygon Images. These converted landslide images are used as a input to CNN for landslide classification
+This method convert landslide polygon data to landslide polygon Images. These converted landslide images are used as a input to 
+Convolutional Neural Networks for landslide classification.
 
 
 
