@@ -15,7 +15,7 @@ Sample output of each lmethod
 The below plot shows the probability of each landslide polygons in testing inventory belonging to earthquake and rainfall-induced class. The majority trigger of
 landslides is the final trigger of the testing inventory.
 
-.. image:: https://user-images.githubusercontent.com/63171258/154713717-884bcc0e-0817-48ef-a3b4-973c335a4c26.png
+.. image:: Images/sample_output.png
    :width: 1200 
 
 
