@@ -90,6 +90,14 @@ The below plot shows the sample landslide polygon Images.
 
 .. image:: Images/sample_landslideimages.png
    :width: 1200 
+   
+Coversion of 2D landslide polygons to Images
+--------------------------------------------
+The below plot shows the method for coversion of 2d landslide polygon to grayscale binary images.
+
+.. image:: Images/conversion_polygon_toimage.png
+   :width: 1200    
+   
 
 
 
