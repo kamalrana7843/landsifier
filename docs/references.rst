@@ -27,6 +27,9 @@ Funding:
 The development of ``Landsifier``  is supported by Co-PREPARE project (No: 57553291) by ``German Academic Exchange Service (DAAD)`` 
 and Chester F Carlson Centre for Imaging Science, ``Rochester Institute of technology``.
 
+.. image:: Images/funding_institute.png
+   :width: 1200 
+
 Authors:
 ------------
 
