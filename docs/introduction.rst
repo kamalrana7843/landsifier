@@ -78,13 +78,18 @@ The below plot shows the method for coversion of 2d landslide polygon to 3D shap
 
 
 
-3.Image based method
+3. Image based method
 =====================
 
 This method convert landslide polygon data to landslide polygon Images. These converted landslide images are used as a input to 
 Convolutional Neural Networks for landslide classification.
 
+Sample Polygon Images 
+---------------------
+The below plot shows the sample landslide polygon Images.
 
+.. image:: Images/sample_landslideimages.png
+   :width: 1200 
 
 
 
