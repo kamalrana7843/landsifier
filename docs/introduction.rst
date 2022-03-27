@@ -62,6 +62,21 @@ This method convert 2D landslide polygon to 3D landslide shape by including elev
 features of 3D landslide shape use topological data analysis. These topological features can be used in machine learning algorithm for landslide triggers
 classification.
 
+Sample 3D landslide shape
+--------------------------
+The below plot shows the sample 3D landslide shape of earthquake and rainfall-induced inventories.
+
+.. image:: Images/3dlandslide_samples.png
+   :width: 1200 
+   
+Coversion of 2D landslide polygons to 3D landslide shape
+----------------------------------------------------------
+The below plot shows the method for coversion of 2d landslide polygon to 3D shape.
+
+.. image:: Images/conversion2d_to3d.png
+   :width: 1200 
+
+
 
 3.Image based method
 =====================
