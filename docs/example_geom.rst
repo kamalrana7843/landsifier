@@ -87,7 +87,7 @@ Visualization of the classification results
 
     plot_geometric_results(predict_probability_hokkaido)
     
-.. image:: https://user-images.githubusercontent.com/63171258/160238663-af9ccae1-2184-4c1f-95e7-603cb0e87b30.png
+.. image:: Images/hokkaido_geom.png
    :width: 1200    
         
 - Case 2: Iwata (Earthquake -triggerd) is a testing inventory 
@@ -109,7 +109,7 @@ Visualization of the classification results
 
     plot_geometric_results(predict_probability_iwata)
     
-.. image:: https://user-images.githubusercontent.com/63171258/160238666-5efa2fb2-97f0-4d21-9bca-59b024530376.png
+.. image:: Images/iwata_geom.png
    :width: 1200       
     
 - Case 3: Niigata (Earthquake -triggerd) is a testing inventory 
@@ -132,7 +132,7 @@ Visualization of the classification results
 
      plot_geometric_results(predict_probability_niigata)
 
-.. image:: https://user-images.githubusercontent.com/63171258/160238668-34a47632-71f7-4ea7-89b7-2f7b4a8b34f7.png
+.. image:: Images/niigata_geom.png
    :width: 1200   
      
 - Case 4: Kumamoto (Rainfall -triggerd) is a testing inventory 
@@ -153,7 +153,7 @@ Visualization of the classification results
 
      plot_geometric_results(predict_probability_kumamoto)
   
-.. image:: https://user-images.githubusercontent.com/63171258/160238671-4bfb5700-e254-47f4-a480-684962d8e8b3.png
+.. image:: Images/kumamoto_geom.png
    :width: 1200     
      
 - Case 5: Fukuoka (Rainfall -triggerd) is a testing inventory 
@@ -174,7 +174,7 @@ Visualization of the classification results
 
     plot_geometric_results(predict_probability_fukuoka)
  
-.. image:: https://user-images.githubusercontent.com/63171258/160238672-88edb769-c25e-4d2f-9549-1d8187a12c4e.png
+.. image:: Images/fukuoka_geom.png
    :width: 1200    
     
 - Case 6: Saka (Rainfall -triggerd) is a testing inventory 
@@ -195,7 +195,7 @@ Visualization of the classification results
 
     plot_geometric_results(predict_probability_saka)    
     
-.. image:: https://user-images.githubusercontent.com/63171258/160238674-541befb1-4287-4012-b979-dc54c9c80d8e.png
+.. image:: Images/saka_geom.png
    :width: 1200     
     
 
