@@ -33,9 +33,28 @@ and Chester F Carlson Centre for Imaging Science, ``Rochester Institute of techn
 Authors:
 ------------
 
-- Kamal Rana: Visiting Researcher at GFZ German Research Centre for Geosciences, Germany and fourth year PhD student at Chester F Carlson Centre for Imaging Science, Rochester Institute of Technology, USA.
+1. ``Kamal Rana``: Visiting Researcher at GFZ German Research Centre for Geosciences, Germany and fourth year PhD student at Chester F Carlson Centre for Imaging   Science, Rochester Institute of Technology, USA.
 
-- Nishant Malik: Professor at School of Mathematical Sciences, Rochester Institute of Technology, New York, USA.
+  Research interest:
+  
+- Data-driven studies of geophysical systems through integration of methods from dynamical systems, networks with machine learning.
+- Developing algorithms for Imaging systems using machine learning and deep learning.
+
+  Linkedin:  
+  
+  
+2. ``Nishant Malik``: Professor at School of Mathematical Sciences, Rochester Institute of Technology, New York, USA.
+
+  Research interest:
+         
+ - Data-driven studies of geophysical systems through integration of methods from dynamical systems, networks with machine learning.
 
 
-- Ugur Ozturk: Scientist at GFZ German Research Centre for Geosciences and University of Potsdam, Germany
+
+3. ``Ugur Ozturk``: Scientist at GFZ German Research Centre for Geosciences and University of Potsdam, Germany.
+
+  Research interest:
+  
+-  Exploring spatial landslide patterns through statistical learning models to better relate landslide incidents to their triggers, such as heavy rainfalls and    earthquakes.
+
+
