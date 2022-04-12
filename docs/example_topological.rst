@@ -15,7 +15,7 @@ Import topological features based module functions from Landsifier library
    from topo_based_model import make_3d_polygons
    from topo_based_model import get_ml_features
    from topo_based_model import classify_inventory_tda
-   from topo_based_model import plot_results
+   from topo_based_model import plot_topological_results
    import numpy as np
     
     
@@ -116,7 +116,7 @@ Visualization of the classification results
 
 .. code:: ipython3
 
-    plot_geometric_results(predict_probability_hokkaido)
+    plot_topological_results(predict_probability_hokkaido)
     
 .. image:: Images/hokkaido_top.png
    :width: 1200    
@@ -138,7 +138,7 @@ Visualization of the classification results
 
 .. code:: ipython3
 
-    plot_geometric_results(predict_probability_iwata)
+    plot_topological_results(predict_probability_iwata)
     
 .. image:: Images/iwata_topo.png
    :width: 1200       
@@ -153,7 +153,6 @@ Training the algorithm on rest five inventories and test it on Iwata inventory.
    rainfall_inventory_features=np.vstack((features_rain_kumamoto,features_rain_fukuoka,features_rain_saka))
    test_inventory_features=features_earth_niigata  
    predict_probability_niigata=classify_inventory_tda(earthquake_inventory_features,rainfall_inventory_features,test_inventory_features)
-   plot_geometric_results(predict_probability_niigata)
 
 Visualization of the classification results
 
@@ -161,7 +160,7 @@ Visualization of the classification results
 
 .. code:: ipython3
 
-     plot_geometric_results(predict_probability_niigata)
+     plot_topological_results(predict_probability_niigata)
 
 .. image:: Images/niigata_topo.png
    :width: 1200   
@@ -182,7 +181,7 @@ Visualization of the classification results
 
 .. code:: ipython3
 
-     plot_geometric_results(predict_probability_kumamoto)
+     plot_topological_results(predict_probability_kumamoto)
   
 .. image:: Images/kumamoto_topo.png
    :width: 1200     
@@ -224,7 +223,7 @@ Visualization of the classification results
 
 .. code:: ipython3
 
-    plot_geometric_results(predict_probability_saka)    
+    plot_topological_results(predict_probability_saka)    
     
 .. image:: Images/iwata_topo.png
    :width: 1200     
