@@ -68,6 +68,7 @@ def latlon_to_eastnorth (lonlat_polydata):
     Returns:
             (array_like)
             easting and northing coordinates of landslide polygon data when polygon data has longitude latitude coordinates
+    """
 
 def increase_resolution_polygon(data):
     """
