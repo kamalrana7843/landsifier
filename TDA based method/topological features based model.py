@@ -453,7 +453,7 @@ def classify_inventory_tda(earthquake_inventory_features,rainfall_inventory_feat
     return predictions
 
 
-def plot_geometric_results(predict_proba):
+def plot_topological_results(predict_proba):
     
     """
     function to visualize the trigger prediction of landslides in testing inventory
