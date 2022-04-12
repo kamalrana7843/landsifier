@@ -118,7 +118,7 @@ Visualization of the classification results
 
     plot_geometric_results(predict_probability_hokkaido)
     
-.. image:: Images/hokkaido_topo.png
+.. image:: Images/hokkaido_top.png
    :width: 1200    
         
 - Case 2: Iwata (Earthquake -triggerd) is a testing inventory 
