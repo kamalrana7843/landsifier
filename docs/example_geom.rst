@@ -9,12 +9,12 @@ Import geometric features based module functions from Landsifier library
 ------------------------------------------------------------------------
 .. code:: ipython3
 
-    import rf_based_model
-    from rf_based_model import read_shapefiles
-    from rf_based_model import latlon_to_eastnorth
-    from rf_based_model import get_geometric_properties_landslide
-    from rf_based_model import classify_inventory_rf
-    from rf_based_model import plot_geometric_results
+    import geom_based_model
+    from geom_based_model import read_shapefiles
+    from geom_based_model import latlon_to_eastnorth
+    from geom_based_model import get_geometric_properties_landslide
+    from geom_based_model import classify_inventory_rf
+    from geom_based_model import plot_geometric_results
     import numpy as np
     
     
