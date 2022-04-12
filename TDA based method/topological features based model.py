@@ -1,3 +1,5 @@
+##  Python libraries needed to run the TDA based method package ##
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.io import loadmat
@@ -39,20 +41,37 @@ from gtda.diagrams import Filtering
 
 
 
-def read_shapefiles(path_filename):
+def read_shapefiles (path_filename):
     
     """
-        function to read shapefiles
-        Input of function is file path of shapefile
+    function to read the shapefile from the local file path of landslide inventory
+    
+  
+    Parameters:
+         :path_filename (str): path to local inventory shapefiles
+    
+    
+    Returns:
+         read shapefile from file path
     
     """
     
     return gpd.read_file(path_filename)
 
 def min_max_inventory(poly_data,lon_res,lat_res):
+
     """
-       function to calculate the bounding box coordinates of complete landslide inventory
-       Input of function is polygon data ,longitude and latitude resolution
+    function to calculate the bounding box coordinates of complete landslide inventory
+
+
+    Parameters:
+          :poly_data (str): landslide polygon data in an inventory
+          :lon_res (float): longitude resolution
+          :lat_res (float): latitude resolution
+
+    
+    Returns:
+         bounding box coordinates of landslide inventory region
     
     """
     data_coord=[]
@@ -64,19 +83,23 @@ def min_max_inventory(poly_data,lon_res,lat_res):
             data_coord.append([min_landslide_lon,max_landslide_lon,min_landslide_lat,max_landslide_lat])
     data_coord=np.asarray(data_coord) 
     kk=20
-    """
-    output of function is (minimum longitude, maximum longitude, minimum latitude, maximum latitude) 
     
-    """
     return (np.min(data_coord[:,0])-kk*lon_res, np.max(data_coord[:,1])+kk*lon_res,np.min(data_coord[:,2])+kk*lat_res,np.max(data_coord[:,3])-kk*lat_res)
 
 
 def download_dem(poly_data,dem_location,inventory_name):
+
     """
     function to download the DEM corresponding to inventory region
-    input (dem_location): provide the path where user wants to download DEM
-    input (inventory_name): inventory_name to save the dem file
-    
+
+    Parameters:
+         :poly_data (str) : landslide polygon data in an inventory
+         :dem_location (str): provide the path where user wants to download DEM
+         :inventory_name (str): inventory_name to save the dem file
+
+    Returns:
+        (str) downloaded DEM file location for input landslide inventory
+          
     """
     
     longitude_min,longitude_max,latitude_min,latitude_max=min_max_inventory(poly_data,0.00,-0.00)
@@ -158,12 +181,18 @@ def download_dem(poly_data,dem_location,inventory_name):
 
 
 def make_3d_polygons(poly_data,dem_location,inventory_name,kk):
+
     """    
-       function to get 3D point cloud from 2D shape of landslide
-       Input(poly_data): polygons shapefile
-       Input(dem_location): path of dem file
-       Input(inventory_name): path of dem file
-       Input(kk):kk=1 if user have already DEM corresponding to inventory
+    function to get 3D point cloud from 2D shape of landslide
+
+    Parameters:
+       :poly_data (str): polygons shapefile
+       :dem_location (str): path of dem file
+       :inventory_name (str): path of dem file
+       :kk (int): kk=1 if user have already DEM corresponding to inventory region otherwise use any other number
+   
+    Returns:
+       (array_like) 3D data of landslides
        
     """
     
@@ -280,8 +309,16 @@ def make_3d_polygons(poly_data,dem_location,inventory_name,kk):
 
 
 def get_ml_features(data):
+
     """
     function to get machine learning features from 3D point cloud data
+
+    Parameters:
+         :data (array_like): 3D point cloud data of landslides
+   
+    Returns:
+          Topological features corresponding to 3D point cloud data
+
     
     """
     
@@ -338,9 +375,15 @@ def classify_inventory_tda(earthquake_inventory_features,rainfall_inventory_feat
     
     """
     function to give probability of testing inventory belonging to earthquake and rainfall class
-    Input:(earthquake_inventory_features) is TDA features of known earthquake inventories landslides
-    Input:(rainfall_inventory_features) is TDA features of known rainfall inventories landslides
-    Input:(test_inventory_features) is TDA features of known testing inventory landslides    
+     
+    Parameters:
+        :earthquake_inventory_features (array_like): TDA features of known earthquake inventories landslides
+        :rainfall_inventory_features (array_like):  TDA features of known rainfall inventories landslides
+        :test_inventory_features (array_like): TDA features of known testing inventory landslides    
+
+    Returns:
+           (array_like) probability of testing inventory landslides belonging to earthquake and rainfall class
+
     """
     
     earthquake_label=np.zeros((np.shape(earthquake_inventory_features)[0],1))
@@ -405,13 +448,7 @@ def classify_inventory_tda(earthquake_inventory_features,rainfall_inventory_feat
     
     
      
-    """
-       This functions print the probability of inventory belonging to earthquake and rainfall class
-       
-       Output of function is probability of each landslide in inventory class belonging to earthuake and rainfall class.
-       The output of function is used for visualization of testing results
-    
-    """
+  
     
     return predictions
 
@@ -419,12 +456,18 @@ def classify_inventory_tda(earthquake_inventory_features,rainfall_inventory_feat
 def plot_geometric_results(predict_proba):
     
     """
+    function to visualize the trigger prediction of landslides in testing inventory
     
-     This function is for visualization of testing results
-     Input: (predict_proba) is probability of each landslide in inventory class belonging to earthuake and rainfall class.
-    
+     
+    Parameters:
+         :predict_proba (array_like): probability of each landslide in inventory class belonging to earthquake and rainfall class.
+                   
+                   
+    Returns:
+         Visualization of landslide probabilities belong to earthquake and rainfall class and trigger prediction of entire landslide 
+         inventory 
+         
     """
-    
     
     plt.rc('text', usetex=True)
     # chage xtick and ytick fontsize 
@@ -513,3 +556,4 @@ def plot_geometric_results(predict_proba):
     #cb.set_label('Earthquake                            Rainfall ',fontsize=26)
     plt.show()
     ##################################################################################    
+
