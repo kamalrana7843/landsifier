@@ -1,6 +1,9 @@
 ##  Python libraries needed to run the RF based method package ##
 
 
+##  Python libraries needed to run the RF based method package ##
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.io import loadmat
@@ -24,20 +27,18 @@ from sklearn.ensemble import RandomForestClassifier
 import time
 
 
-def read_shapefiles(path_filename):
+def read_shapefiles (path_filename):
     
     """
     function to read the shapefile from the local file path of landslide inventory
     
+  
+    Parameters:
+         :path_filename (str): path to local inventory shapefiles
     
-    Parameters
-    ----------
-    path_filename: str
-                  path to local inventory shapefiles
     
-    -------
-    Return:str
-           read shapefile from file path.
+    Returns:
+         read shapefile from file path
     
     """
     
@@ -45,21 +46,19 @@ def read_shapefiles(path_filename):
 
 
 
-def latlon_to_eastnorth(lonlat_polydata):
+def latlon_to_eastnorth (lonlat_polydata):
     
     """ 
     function to convert the (longitude latitude) coordinates of polygons to (easting, northing) coordinates
     
     
-    Parameters
-    -----------
-    lonllat_polydata: array_like
-                      longitude and latitude coordinates data.
+    Parameters:
+          :lonllat_polydata (array_like): 
+                             longitude and latitude coordinates data
                       
-    Return
-    ------
-    east_north_polydata: array_like
-                         easting and northing coordinates of landslide polygon data when polygon data has longitude latitude coordinates 
+    Returns:
+            (array_like)
+            easting and northing coordinates of landslide polygon data when polygon data has longitude latitude coordinates 
 
     
      
@@ -72,28 +71,21 @@ def latlon_to_eastnorth(lonlat_polydata):
     east_north_polydata=np.asarray(east_north_polydata) 
     return  east_north_polydata  
 
-def get_geometric_properties_landslide(poly_data,coord_lonlat,order_lonlat):
+def get_geometric_properties_landslide (poly_data,coord_lonlat,order_lonlat):
     
     """
     function to calculate the geometric properties of landslide polygon
     
-    Parameters
-    -----------
-    
-    poly_data: readed shapefile
-               readed landslide inventory shapefile (output of read_shapefile function)
+    Parameters:
+          :poly_data: readed landslide inventory shapefile (output of read_shapefile function)
               
-    coord_lonlat: Boolean
-                True if inventory shapefile has polygon coordinates in lonlat otherwise False
+          :coord_lonlat (Boolean): True if inventory shapefile has polygon coordinates in lonlat otherwise False
                  
-    order_lonlat: Boolean
-               True if point in input polygon shapefile is (lon, lat), False if (lat, lon)  
+          :order_lonlat (Boolean): True if point in input polygon shapefile is (lon, lat), False if (lat, lon)  
                
                
-    Return
-    ---------
-    store_geometric_features_all_landslides: array_like
-                                             Geometric features of landslide polygon.
+    Returns:
+            (array_like) Geometric features of landslide polygon.
            
     """
     
@@ -163,29 +155,21 @@ def get_geometric_properties_landslide(poly_data,coord_lonlat,order_lonlat):
     return store_geometric_features_all_landslides  
 
 
-def classify_inventory_rf(earthquake_inventory_features,rainfall_inventory_features,test_inventory_features):
+def classify_inventory_rf (earthquake_inventory_features,rainfall_inventory_features,test_inventory_features):
     
     """
     function to predict the trigger of landslides in testing inventory
     
     
-    Parameters
-    ----------
-    
-    earthquake_inventory_features: array_like
-                                   geometric features of known earthquake inventories landslides
+    Parameters:
+   	   :earthquake_inventory_features (array_like): geometric features of known earthquake inventories landslides
                                    
-    rainfall_inventory_features: array_like
-                                 geometric features of known rainfall inventories landslides
+    	   :rainfall_inventory_features (array_like): geometric features of known rainfall inventories landslides
                                  
-    test_inventory_features: array_like
-                             geometric features of known testing inventory landslides  
+         :test_inventory_features (array_like): geometric features of known testing inventory landslides  
                              
-    Return
-    ------
-    
-    predictions:array_like
-                probability of testing inventory landslides belonging to earthquake and rainfall class
+    Returns:
+            (array_like) probability of testing inventory landslides belonging to earthquake and rainfall class
                                                    
     """
     
@@ -251,22 +235,20 @@ def classify_inventory_rf(earthquake_inventory_features,rainfall_inventory_featu
     return predictions
     
     
-def plot_geometric_results(predict_proba):
+def plot_geometric_results (predict_proba):
     
     
     """
     function to visualize the trigger prediction of landslides in testing inventory
     
      
-    Parameters
-    ----------
-    predict_proba: array_like
-                   probability of each landslide in inventory class belonging to earthuake and rainfall class.
+    Parameters:
+         :predict_proba (array_like): probability of each landslide in inventory class belonging to earthquake and rainfall class.
                    
                    
-    Return
-    -------
-    Visualization of landslide probabilities belong to earthquake and rainfall class and trigger prediction of entire landslide inventory 
+    Returns:
+         Visualization of landslide probabilities belong to earthquake and rainfall class and trigger prediction of entire landslide 
+         inventory 
                 
     """
     
@@ -349,4 +331,4 @@ def plot_geometric_results(predict_proba):
 
     #cb.set_label('Earthquake                            Rainfall ',fontsize=26)
     plt.show()
-    ##################################################################################    
+    ################################################################################## 
