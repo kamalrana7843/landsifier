@@ -9,10 +9,10 @@ Import Image based module functions from Landsifier library
 ------------------------------------------------------------------------
 .. code:: ipython3
 
-    from CNN_based_model import make_ls_images
-    from CNN_based_model import classify_inventory_cnn
-    from CNN_based_model import plot_geometric_results
-    from CNN_based_model import read_shapefiles
+    from image_based_model import make_ls_images
+    from image_based_model import classify_inventory_cnn
+    from image_based_model import plot_geometric_results
+    from image_based_model import read_shapefiles
     import numpy as np
     
     
