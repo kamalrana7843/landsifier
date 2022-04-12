@@ -5,12 +5,12 @@ A python based library to estimate likely triggers of mapped landslides
 
 The library consitute three machine learning based method for finding the trigger of Landslide inventories.
 
-# 1. Random Forest Based Method
+# 1. Geometric Features Based Method
 
 This method is based on using 2D landslide polygon shape properties for classification. This method calculates various geometric properties of landslide polygon and based on these geometric properties it classify trigger of landslide inventories.
 
 
-# 2. CNN (Convolutional Neural Networks) Based Method
+# 2. Image Based Method
 
 This method convert landslide polygon data to landslide polygon Images. These converted landslide images are used as a input to CNN for landslide classification
 
