@@ -10,12 +10,12 @@ Import topological features based module functions from Landsifier library
 ------------------------------------------------------------------------
 .. code:: ipython3
 
-   import tda_plus_rf_based_model 
-   from tda_plus_rf_based_model import read_shapefiles
-   from tda_plus_rf_based_model import make_3d_polygons
-   from tda_plus_rf_based_model import get_ml_features
-   from tda_plus_rf_based_model import classify_inventory_tda
-   from tda_plus_rf_based_model import plot_geometric_results
+   import topo_based_model 
+   from topo_based_model import read_shapefiles
+   from topo_based_model import make_3d_polygons
+   from topo_based_model import get_ml_features
+   from topo_based_model import classify_inventory_tda
+   from topo_based_model import plot_results
    import numpy as np
     
     
