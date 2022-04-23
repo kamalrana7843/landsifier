@@ -87,7 +87,7 @@ Visualization of the classification results
 
     plot_geometric_results(predict_probability_hokkaido)
     
-.. image:: Images/hokkaido_geom.png
+.. image::  /docs/Images/hokkaido_geom.png
    :width: 1200    
         
 - Case 2: Iwata (Earthquake -triggerd) is a testing inventory 
@@ -109,7 +109,7 @@ Visualization of the classification results
 
     plot_geometric_results(predict_probability_iwata)
     
-.. image:: Images/iwata_geom.png
+.. image:: /docs/Images/iwata_geom.png
    :width: 1200       
     
 - Case 3: Niigata (Earthquake -triggerd) is a testing inventory 
@@ -132,7 +132,7 @@ Visualization of the classification results
 
      plot_geometric_results(predict_probability_niigata)
 
-.. image:: Images/niigata_geom.png
+.. image:: /docs/Images/niigata_geom.png
    :width: 1200   
      
 - Case 4: Kumamoto (Rainfall -triggerd) is a testing inventory 
@@ -153,7 +153,7 @@ Visualization of the classification results
 
      plot_geometric_results(predict_probability_kumamoto)
   
-.. image:: Images/kumamoto_geom.png
+.. image:: /docs/Images/kumamoto_geom.png
    :width: 1200     
      
 - Case 5: Fukuoka (Rainfall -triggerd) is a testing inventory 
@@ -174,7 +174,7 @@ Visualization of the classification results
 
     plot_geometric_results(predict_probability_fukuoka)
  
-.. image:: Images/fukuoka_geom.png
+.. image:: /docs/Images/fukuoka_geom.png
    :width: 1200    
     
 - Case 6: Saka (Rainfall -triggerd) is a testing inventory 
@@ -195,7 +195,7 @@ Visualization of the classification results
 
     plot_geometric_results(predict_probability_saka)    
     
-.. image:: Images/saka_geom.png
+.. image:: /docs/Images/saka_geom.png
    :width: 1200     
     
 
