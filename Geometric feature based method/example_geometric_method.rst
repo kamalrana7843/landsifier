@@ -52,17 +52,17 @@ Calculate Geometric Propeties of  Earthqake and Rainfall induced inventories
 
 .. code:: ipython3
 
-    features_earth_hokkaido=get_geometric_properties_landslide(earth_hokkaido_shapefile,True,True)
-    features_earth_iwata=get_geometric_properties_landslide(earth_iwata_shapefile,True,True)
-    features_earth_niigata = get_geometric_properties_landslide(earth_niigata_shapefile,True,True)
+    features_earth_hokkaido=get_geometric_properties_landslide(earth_hokkaido_shapefile)
+    features_earth_iwata=get_geometric_properties_landslide(earth_iwata_shapefile)
+    features_earth_niigata = get_geometric_properties_landslide(earth_niigata_shapefile)
 
 - Rainfall triggered inventories
 
 .. code:: ipython3
 
-  features_rain_kumamoto = get_geometric_properties_landslide(rain_kumamoto_shapefile,True,True)
-  features_rain_fukuoka = get_geometric_properties_landslide(rain_fukuoka_shapefile,True,True)
-  features_rain_saka = get_geometric_properties_landslide(rain_saka_shapefile,True,True)
+  features_rain_kumamoto = get_geometric_properties_landslide(rain_kumamoto_shapefile)
+  features_rain_fukuoka = get_geometric_properties_landslide(rain_fukuoka_shapefile)
+  features_rain_saka = get_geometric_properties_landslide(rain_saka_shapefile)
 
 
 Taking one of the landslide inventory as the Testing inventory
