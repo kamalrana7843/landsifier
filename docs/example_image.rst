@@ -50,17 +50,17 @@ Convert landslide polygons to grayscale binary images
 
 .. code:: ipython3
 
-    feature_Earth_hokkaido=make_ls_images(earth_hokkaido_shapefile,True,True)
-    feature_Earth_iwata=make_ls_images(earth_iwata_shapefile,True,True)
-    feature_Earth_niigata = make_ls_images(earth_niigata_shapefile,True,True)
+    feature_Earth_hokkaido=make_ls_images(earth_hokkaido_shapefile)
+    feature_Earth_iwata=make_ls_images(earth_iwata_shapefile)
+    feature_Earth_niigata = make_ls_images(earth_niigata_shapefile)
 
 - Rainfall triggered inventories
 
 .. code:: ipython3
 
- feature_Rain_kumamoto = make_ls_images(rain_kumamoto_shapefile,True,True)
- feature_Rain_fukuoka = make_ls_images(rain_fukuoka_shapefile,True,True)
- feature_Rain_saka = make_ls_images(rain_saka_shapefile,True,True)
+ feature_Rain_kumamoto = make_ls_images(rain_kumamoto_shapefile)
+ feature_Rain_fukuoka = make_ls_images(rain_fukuoka_shapefile)
+ feature_Rain_saka = make_ls_images(rain_saka_shapefile)
 
 
 Taking one of the landslide inventory as the Testing inventory
