@@ -78,12 +78,8 @@ def get_geometric_properties_landslide (poly_data):
     
     Parameters:
           :poly_data: readed landslide inventory shapefile (output of read_shapefile function)
-              
-          :coord_lonlat (Boolean): True if inventory shapefile has polygon coordinates in lonlat otherwise False
-                 
-          :order_lonlat (Boolean): True if point in input polygon shapefile is (lon, lat), False if (lat, lon)  
-               
-               
+             
+                
     Returns:
             (array_like) Geometric features of landslide polygon.
            
