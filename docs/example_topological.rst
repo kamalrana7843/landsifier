@@ -82,17 +82,17 @@ Get ML features from 3d point cloud data
 
 .. code:: ipython3
 
-   features_earth_hokkaido=get_ml_features(pointcloud_earth_hokkaido)
-   features_earth_iwata=get_ml_features(pointcloud_earth_iwata)
-   features_earth_niigata=get_ml_features(pointcloud_earth_niigata)
+   features_earth_hokkaido=get_tda_features(pointcloud_earth_hokkaido)
+   features_earth_iwata=get_tda_features(pointcloud_earth_iwata)
+   features_earth_niigata=get_tda_features(pointcloud_earth_niigata)
 
 - Rainfall triggered inventories
 
 .. code:: ipython3
 
-  features_rain_kumamoto=get_ml_features(pointcloud_rain_kumamoto)
-  features_rain_fukuoka=get_ml_features(pointcloud_rain_fukuoka)
-  features_rain_saka=get_ml_features(pointcloud_rain_saka)
+  features_rain_kumamoto=get_tda_features(pointcloud_rain_kumamoto)
+  features_rain_fukuoka=get_tda_features(pointcloud_rain_fukuoka)
+  features_rain_saka=get_tda_features(pointcloud_rain_saka)
 
 
 Taking one of the landslide inventory as the Testing inventory
