@@ -33,9 +33,12 @@ and Chester F Carlson Centre for Imaging Science, ``Rochester Institute of techn
 Authors:
 ------------
 
-1. ``Kamal Rana``: Visiting Researcher at GFZ German Research Centre for Geosciences, Germany and fourth year PhD student at Chester F Carlson Centre for Imaging   Science, Rochester Institute of Technology, USA.
+Kamal Rana (Imaging Science PhD Student)
+-----------------------------------------
 
-  Research interest:
+Visiting Researcher at GFZ German Research Centre for Geosciences, Germany and fifth year PhD student at Chester F Carlson Centre for Imaging   Science, Rochester Institute of Technology, USA.
+
+Research interest:
   
 - Data-driven studies of geophysical systems through integration of methods from dynamical systems, networks with machine learning.
 - Developing algorithms for Imaging systems using machine learning and deep learning.
@@ -43,18 +46,20 @@ Authors:
   Linkedin:  
   
   
-2. ``Nishant Malik``: Professor at School of Mathematical Sciences, Rochester Institute of Technology, New York, USA.
+Nishant Malik (Professor at School of Mathematical Sciences, Rochester Institute of Technology, New York, USA)
+---------------------------------------------------------------------------------------------------------------
 
-  Research interest:
+Research interest:
          
- - Data-driven studies of geophysical systems through integration of methods from dynamical systems, networks with machine learning.
+- Data-driven studies of geophysical systems through integration of methods from dynamical systems, networks with machine learning.
 
 
 
-3. ``Ugur Ozturk``: Scientist at GFZ German Research Centre for Geosciences and University of Potsdam, Germany.
+Ugur Ozturk ( Research Scientist at GFZ German Research Centre for Geosciences and University of Potsdam, Germany)
+-------------------------------------------------------------------------------------------------------------------
 
-  Research interest:
+Research interest:
   
--  Exploring spatial landslide patterns through statistical learning models to better relate landslide incidents to their triggers, such as heavy rainfalls and    earthquakes.
+-  Exploring spatial landslide patterns through statistical learning models to better relate landslide incidents to their triggers, such as heavy rainfalls and  earthquakes.
 
 
