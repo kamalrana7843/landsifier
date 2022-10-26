@@ -5,22 +5,35 @@ How do I cite ``Landsifier``?
 -------------------------------
 We would appreciate citations to the following papers:
 
-    ``Landslide Geometry Reveals its Trigger``
-
+    ``Landslide Geometry Reveals its Trigger``  
 You can use the following BibTeX entry:
 
 .. code:: RST
 
- 		@article{rana2021landslide,
-  		 title={Landslide geometry reveals its trigger},
-             author={Rana, Kamal and Ozturk, Ugur and Malik, Nishant},
-             journal={Geophysical Research Letters},
-             volume={48},
-             number={4},
-             pages={e2020GL090848},
-             year={2021},
-             publisher={Wiley Online Library}
-              }
+ @article{rana2021landslide,
+  title={Landslide geometry reveals its trigger},
+  author={Rana, Kamal and Ozturk, Ugur and Malik, Nishant},
+  journal={Geophysical Research Letters},
+  volume={48},
+  number={4},
+  pages={e2020GL090848},
+  year={2021},
+  publisher={Wiley Online Library}
+  }
+  
+``Landsifier v1.0: a Python library to estimate likely triggers of mapped landslides``
+  
+  
+.. code:: RST
+
+ @article{rana2022landsifier,
+ title={Landsifier v1. 0: a Python library to estimate likely triggers of mapped landslides},
+ author={Rana, Kamal and Malik, Nishant and Ozturk, Ugur},
+ journal={Natural Hazards and Earth System Sciences Discussions},
+ pages={1--26},
+ year={2022},
+ publisher={Copernicus GmbH}
+  }     
 
 Funding:
 ----------
