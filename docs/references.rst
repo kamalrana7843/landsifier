@@ -1,7 +1,6 @@
 References 
 ===========
 
-Test hyperlink: `Stack Overflow home <https://stackoverflow.com/>`_.
 
 How do I cite ``Landsifier``?
 -------------------------------
@@ -59,7 +58,7 @@ Research interest:
 - Developing algorithms for Imaging systems using machine learning and deep learning.
 
    
-  Linkedin: `Kamal Rana <https://www.linkedin.com/in/kamal-rana-a73976103/>`_.
+  Linkedin: `Kamal Rana Profile <https://www.linkedin.com/in/kamal-rana-a73976103/>`_.
 
   
   
@@ -72,6 +71,9 @@ Research interest:
          
 - Data-driven studies of geophysical systems through integration of methods from dynamical systems, networks with machine learning.
 
+  Website: `Dr. Malik Personal Website <https://nishant-malik.github.io/>`_.
+  
+  Group: `Dr. Malik Group <https://nishant-malik.github.io/comp-lab.html>`_.
 
 
 Ugur Ozturk ( Research Scientist at GFZ German Research Centre for Geosciences and University of Potsdam, Germany)
