@@ -1,6 +1,8 @@
 References 
 ===========
 
+Test hyperlink: `Stack Overflow home <https://stackoverflow.com/>`_.
+
 How do I cite ``Landsifier``?
 -------------------------------
 We would appreciate citations to the following papers:
@@ -56,7 +58,9 @@ Research interest:
 - Data-driven studies of geophysical systems through integration of methods from dynamical systems, networks with machine learning.
 - Developing algorithms for Imaging systems using machine learning and deep learning.
 
-  Linkedin:  
+   
+  Linkedin: `Kamal Rana <https://www.linkedin.com/in/kamal-rana-a73976103/>`_.
+
   
   
 Nishant Malik (Professor at School of Mathematical Sciences, Rochester Institute of Technology, New York, USA)
