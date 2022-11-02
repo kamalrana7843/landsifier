@@ -58,7 +58,7 @@ Research interest:
 - Developing algorithms for Imaging systems using machine learning and deep learning.
 
    
-  Linkedin: `Kamal Rana Profile <https://www.linkedin.com/in/kamal-rana-a73976103/>`_.
+  Linkedin: `Kamal Rana Linkedin Profile <https://www.linkedin.com/in/kamal-rana-a73976103/>`_
 
   
   
@@ -67,13 +67,9 @@ Nishant Malik (Professor at School of Mathematical Sciences, Rochester Institute
 
 Dr. Malik is aProfessor at School of Mathematical Sciences, Rochester Institute of Technology, New York, USA. In his research, he employs tools from network science, theory of nonlinear and stochastic dynamical systems, and applied statistics and enjoys working on mathematical problems across disciplines in natural and social sciences. For more information, please visit Dr. Malik's personal webpage and the Complexity Lab @RIT his research group page.
 
-Research interest:
-         
-- Data-driven studies of geophysical systems through integration of methods from dynamical systems, networks with machine learning.
-
-  Website: `Dr. Malik Personal Website <https://nishant-malik.github.io/>`_.
+Website: `Dr. Malik Personal Website <https://nishant-malik.github.io/>`_
   
-  Group: `Dr. Malik Group <https://nishant-malik.github.io/comp-lab.html>`_.
+Research Group: `Dr. Malik Research Group <https://nishant-malik.github.io/comp-lab.html>`_
 
 
 Ugur Ozturk ( Research Scientist at GFZ German Research Centre for Geosciences and University of Potsdam, Germany)
@@ -81,9 +77,5 @@ Ugur Ozturk ( Research Scientist at GFZ German Research Centre for Geosciences a
 
 Dr. Ozturk is a research Scientist at GFZ German Research Centre for Geosciences and University of Potsdam, Germany. In his research, he explore spatial landslide patterns through statistical learning models to better relate landslide incidents to their triggers, such as heavy rainfalls and earthquakes. Lately, Dr. Ozturk also study urban landslides and their role in urban development.
 
-Research interest:
-  
--  Exploring spatial landslide patterns through statistical learning models to better relate landslide incidents to their triggers, such as heavy rainfalls and  earthquakes.
-
-  Website: `Dr. Ugur Webpage <https://www.gfz-potsdam.de/en/staff/ugur.oeztuerk/sec26>`_.
+Website: `Dr. Ugur Webpage <https://www.gfz-potsdam.de/en/staff/ugur.oeztuerk/sec26>`_.
 
