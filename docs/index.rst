@@ -7,16 +7,12 @@ Contents
 ********
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 2
    
    introduction
    installation
-   geom_doc
-   image_doc
-   topo_doc
    example_geom
    example_image
    example_topological
    references
-   geom_based
 
