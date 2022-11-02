@@ -77,5 +77,5 @@ Ugur Ozturk ( Research Scientist at GFZ German Research Centre for Geosciences a
 
 Dr. Ozturk is a research Scientist at GFZ German Research Centre for Geosciences and University of Potsdam, Germany. In his research, he explore spatial landslide patterns through statistical learning models to better relate landslide incidents to their triggers, such as heavy rainfalls and earthquakes. Lately, Dr. Ozturk also study urban landslides and their role in urban development.
 
-Website: `Dr. Ugur Webpage <https://www.gfz-potsdam.de/en/staff/ugur.oeztuerk/sec26>`_.
+Website: `Dr. Ugur Webpage <https://www.gfz-potsdam.de/en/staff/ugur.oeztuerk/sec26>`_
 
