@@ -85,4 +85,5 @@ Research interest:
   
 -  Exploring spatial landslide patterns through statistical learning models to better relate landslide incidents to their triggers, such as heavy rainfalls and  earthquakes.
 
+  Website: `Dr. Ugur Webpage <https://www.gfz-potsdam.de/en/staff/ugur.oeztuerk/sec26>`_.
 
