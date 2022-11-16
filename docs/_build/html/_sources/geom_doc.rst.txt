@@ -1,0 +1,7 @@
+geom\_doc module
+================
+
+.. automodule:: geom_doc
+   :members:
+   :undoc-members:
+   :show-inheritance:

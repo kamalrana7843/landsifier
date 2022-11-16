@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Topological Feature-Based Method Example &mdash; sa saas documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="references.html" />
+    <link rel="prev" title="topo_doc module" href="topo_doc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> sa
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geom_doc.html">geom_doc module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_geom.html">Geometric Feature-Based Method Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image_doc.html">image_doc module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_image.html">Image-Based Method Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topo_doc.html">topo_doc module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Topological Feature-Based Method Example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import-topological-features-based-module-functions-from-landsifier-library">Import topological features based module functions from Landsifier library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-shapefiles-of-earthquake-and-rainfall-triggered-landslide-inventories">Import Shapefiles of Earthquake and Rainfall triggered landslide Inventories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dem-files">DEM files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convert-2d-landslide-polygons-to-3d-landslide-point-cloud">Convert 2D landslide polygons to 3D landslide point cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-ml-features-from-3d-point-cloud-data">Get ML features from 3d point cloud data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#taking-one-of-the-landslide-inventory-as-the-testing-inventory">Taking one of the landslide inventory as the Testing inventory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sa</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Topological Feature-Based Method Example</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/example_topological.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="topological-feature-based-method-example">
+<h1>Topological Feature-Based Method Example<a class="headerlink" href="#topological-feature-based-method-example" title="Permalink to this headline"></a></h1>
+<p>This method uses 3D shape of landslide by incorporating elevation data of landslides via SRTM 30 meters DEM.</p>
+<section id="import-topological-features-based-module-functions-from-landsifier-library">
+<h2>Import topological features based module functions from Landsifier library<a class="headerlink" href="#import-topological-features-based-module-functions-from-landsifier-library" title="Permalink to this headline"></a></h2>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">topo_based_model</span>
+<span class="kn">from</span> <span class="nn">topo_based_model</span> <span class="kn">import</span> <span class="n">read_shapefiles</span>
+<span class="kn">from</span> <span class="nn">topo_based_model</span> <span class="kn">import</span> <span class="n">make_3d_polygons</span>
+<span class="kn">from</span> <span class="nn">topo_based_model</span> <span class="kn">import</span> <span class="n">get_ml_features</span>
+<span class="kn">from</span> <span class="nn">topo_based_model</span> <span class="kn">import</span> <span class="n">classify_inventory_tda</span>
+<span class="kn">from</span> <span class="nn">topo_based_model</span> <span class="kn">import</span> <span class="n">plot_topological_results</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+<p>In this example, we are using six landslide inventories spread over Japan archipaelogo. Out of six-inventories, three inventories are earthquake-triggered
+and rest three inventories are rainfall-induced inventories.</p>
+<ul class="simple">
+<li><p>Earthquake-triggered inventories (Hokkaido, Iwata and Niigata region)</p></li>
+<li><p>Rainfall-induced inventories (Kumamoto, Fukuoka and Saka region)</p></li>
+</ul>
+</section>
+<section id="import-shapefiles-of-earthquake-and-rainfall-triggered-landslide-inventories">
+<h2>Import Shapefiles of Earthquake and Rainfall triggered landslide Inventories<a class="headerlink" href="#import-shapefiles-of-earthquake-and-rainfall-triggered-landslide-inventories" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Earthquake triggered inventories</p></li>
+</ul>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earth_hokkaido_shapefile</span> <span class="o">=</span> <span class="n">read_shapefiles</span><span class="p">(</span><span class="s2">&quot;E:/Germany Visit/Landslide Datasets/Japan Inventory/Earthquake_hokkaido_polygons.shp&quot;</span><span class="p">)</span>
+<span class="n">earth_iwata_shapefile</span> <span class="o">=</span> <span class="n">read_shapefiles</span><span class="p">(</span><span class="s2">&quot;E:/Germany Visit/Landslide Datasets/Japan Inventory/Earthquake_iwata_polygons.shp&quot;</span><span class="p">)</span>
+<span class="n">earth_niigata_shapefile</span> <span class="o">=</span><span class="n">read_shapefiles</span><span class="p">(</span><span class="s2">&quot;E:/Germany Visit/Landslide Datasets/Japan Inventory/Earthquake_niigata_polygons.shp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rainfall triggered inventories</p></li>
+</ul>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rain_kumamoto_shapefile</span> <span class="o">=</span> <span class="n">read_shapefiles</span><span class="p">(</span><span class="s2">&quot;E:/Germany Visit/Landslide Datasets/Japan Inventory/Rainfall_kumamoto_polygons.shp&quot;</span><span class="p">)</span>
+<span class="n">rain_fukuoka_shapefile</span> <span class="o">=</span> <span class="n">read_shapefiles</span><span class="p">(</span><span class="s2">&quot;E:/Germany Visit/Landslide Datasets/Japan Inventory/Rainfall_fukuoka_polygons.shp&quot;</span><span class="p">)</span>
+<span class="n">rain_saka_shapefile</span> <span class="o">=</span> <span class="n">read_shapefiles</span><span class="p">(</span><span class="s2">&quot;E:/Germany Visit/Landslide Datasets/Japan Inventory/Rainfall_saka_polygons.shp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="dem-files">
+<h2>DEM files<a class="headerlink" href="#dem-files" title="Permalink to this headline"></a></h2>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dem_location</span><span class="o">=</span><span class="s2">&quot;E:/dem_japan/&quot;</span>
+<span class="n">inventory_name_list</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;hokkaido.tif&#39;</span><span class="p">,</span><span class="s1">&#39;iwata.tif&#39;</span><span class="p">,</span><span class="s1">&#39;niigata.tif&#39;</span><span class="p">,</span><span class="s1">&#39;kumamoto.tif&#39;</span><span class="p">,</span><span class="s1">&#39;fukuoka.tif&#39;</span><span class="p">,</span><span class="s1">&#39;saka.tif&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="convert-2d-landslide-polygons-to-3d-landslide-point-cloud">
+<h2>Convert 2D landslide polygons to 3D landslide point cloud<a class="headerlink" href="#convert-2d-landslide-polygons-to-3d-landslide-point-cloud" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Earthquake triggered inventories</p></li>
+</ul>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pointcloud_earth_hokkaido</span><span class="o">=</span><span class="n">make_3d_polygons</span><span class="p">(</span><span class="n">earth_hokkaido_shapefile</span><span class="p">,</span><span class="n">dem_location</span><span class="p">,</span><span class="n">inventory_name_list</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pointcloud_earth_iwata</span><span class="o">=</span><span class="n">make_3d_polygons</span><span class="p">(</span><span class="n">earth_iwata_shapefile</span><span class="p">,</span><span class="n">dem_location</span><span class="p">,</span><span class="n">inventory_name_list</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pointcloud_earth_niigata</span><span class="o">=</span><span class="n">make_3d_polygons</span><span class="p">(</span><span class="n">earth_niigata_shapefile</span><span class="p">,</span><span class="n">dem_location</span><span class="p">,</span><span class="n">inventory_name_list</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rainfall triggered inventories</p></li>
+</ul>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pointcloud_rain_kumamoto</span><span class="o">=</span><span class="n">make_3d_polygons</span><span class="p">(</span><span class="n">rain_kumamoto_shapefile</span><span class="p">,</span><span class="n">dem_location</span><span class="p">,</span><span class="n">inventory_name_list</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pointcloud_rain_fukuoka</span><span class="o">=</span><span class="n">make_3d_polygons</span><span class="p">(</span><span class="n">rain_fukuoka_shapefile</span><span class="p">,</span><span class="n">dem_location</span><span class="p">,</span><span class="n">inventory_name_list</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pointcloud_rain_saka</span><span class="o">=</span><span class="n">make_3d_polygons</span><span class="p">(</span><span class="n">rain_saka_shapefile</span><span class="p">,</span><span class="n">dem_location</span><span class="p">,</span><span class="n">inventory_name_list</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="get-ml-features-from-3d-point-cloud-data">
+<h2>Get ML features from 3d point cloud data<a class="headerlink" href="#get-ml-features-from-3d-point-cloud-data" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Earthquake triggered inventories</p></li>
+</ul>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features_earth_hokkaido</span><span class="o">=</span><span class="n">get_tda_features</span><span class="p">(</span><span class="n">pointcloud_earth_hokkaido</span><span class="p">)</span>
+<span class="n">features_earth_iwata</span><span class="o">=</span><span class="n">get_tda_features</span><span class="p">(</span><span class="n">pointcloud_earth_iwata</span><span class="p">)</span>
+<span class="n">features_earth_niigata</span><span class="o">=</span><span class="n">get_tda_features</span><span class="p">(</span><span class="n">pointcloud_earth_niigata</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rainfall triggered inventories</p></li>
+</ul>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features_rain_kumamoto</span><span class="o">=</span><span class="n">get_tda_features</span><span class="p">(</span><span class="n">pointcloud_rain_kumamoto</span><span class="p">)</span>
+<span class="n">features_rain_fukuoka</span><span class="o">=</span><span class="n">get_tda_features</span><span class="p">(</span><span class="n">pointcloud_rain_fukuoka</span><span class="p">)</span>
+<span class="n">features_rain_saka</span><span class="o">=</span><span class="n">get_tda_features</span><span class="p">(</span><span class="n">pointcloud_rain_saka</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="taking-one-of-the-landslide-inventory-as-the-testing-inventory">
+<h2>Taking one of the landslide inventory as the Testing inventory<a class="headerlink" href="#taking-one-of-the-landslide-inventory-as-the-testing-inventory" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Case 1: Hokkaido (Earthquake -triggerd) is a testing inventory</p></li>
+</ul>
+<p>Training the algorithm on rest five inventories and test it on Hokkaido inventory.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earthquake_inventory_features</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">features_earth_iwata</span><span class="p">,</span><span class="n">features_earth_niigata</span><span class="p">))</span>
+<span class="n">rainfall_inventory_features</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">features_rain_kumamoto</span><span class="p">,</span><span class="n">features_rain_fukuoka</span><span class="p">,</span><span class="n">features_rain_saka</span><span class="p">))</span>
+<span class="n">test_inventory_features</span><span class="o">=</span><span class="n">features_earth_hokkaido</span>
+<span class="n">predict_probability</span><span class="o">=</span><span class="n">classify_inventory_tda</span><span class="p">(</span><span class="n">earthquake_inventory_features</span><span class="p">,</span><span class="n">rainfall_inventory_features</span><span class="p">,</span><span class="n">test_inventory_features</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Visualization of the classification results</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_topological_results</span><span class="p">(</span><span class="n">predict_probability_hokkaido</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/hokkaido_top.png"><img alt="_images/hokkaido_top.png" src="_images/hokkaido_top.png" style="width: 1200px;" /></a>
+<ul class="simple">
+<li><p>Case 2: Iwata (Earthquake -triggerd) is a testing inventory</p></li>
+</ul>
+<p>Training the algorithm on rest five inventories and test it on Iwata inventory.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earthquake_inventory_features</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">features_earth_hokkaido</span><span class="p">,</span><span class="n">features_earth_niigata</span><span class="p">))</span>
+<span class="n">rainfall_inventory_features</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">features_rain_kumamoto</span><span class="p">,</span><span class="n">features_rain_fukuoka</span><span class="p">,</span><span class="n">features_rain_saka</span><span class="p">))</span>
+<span class="n">test_inventory_features</span><span class="o">=</span>  <span class="n">features_earth_iwata</span>
+<span class="n">predict_probability_iwata</span><span class="o">=</span><span class="n">classify_inventory_tda</span><span class="p">(</span><span class="n">earthquake_inventory_features</span><span class="p">,</span><span class="n">rainfall_inventory_features</span><span class="p">,</span><span class="n">test_inventory_features</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Visualization of the classification results</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_topological_results</span><span class="p">(</span><span class="n">predict_probability_iwata</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/iwata_topo.png"><img alt="_images/iwata_topo.png" src="_images/iwata_topo.png" style="width: 1200px;" /></a>
+<ul class="simple">
+<li><p>Case 3: Niigata (Earthquake -triggerd) is a testing inventory</p></li>
+</ul>
+<p>Training the algorithm on rest five inventories and test it on Iwata inventory.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earthquake_inventory_features</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">features_earth_hokkaido</span><span class="p">,</span><span class="n">features_earth_iwata</span><span class="p">))</span>
+<span class="n">rainfall_inventory_features</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">features_rain_kumamoto</span><span class="p">,</span><span class="n">features_rain_fukuoka</span><span class="p">,</span><span class="n">features_rain_saka</span><span class="p">))</span>
+<span class="n">test_inventory_features</span><span class="o">=</span><span class="n">features_earth_niigata</span>
+<span class="n">predict_probability_niigata</span><span class="o">=</span><span class="n">classify_inventory_tda</span><span class="p">(</span><span class="n">earthquake_inventory_features</span><span class="p">,</span><span class="n">rainfall_inventory_features</span><span class="p">,</span><span class="n">test_inventory_features</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Visualization of the classification results</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_topological_results</span><span class="p">(</span><span class="n">predict_probability_niigata</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/niigata_topo.png"><img alt="_images/niigata_topo.png" src="_images/niigata_topo.png" style="width: 1200px;" /></a>
+<ul class="simple">
+<li><p>Case 4: Kumamoto (Rainfall -triggerd) is a testing inventory</p></li>
+</ul>
+<p>Training the algorithm on rest five inventories and test it on Kumamoto inventory.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earthquake_inventory_features</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">features_earth_hokkaido</span><span class="p">,</span><span class="n">features_earth_iwata</span><span class="p">,</span><span class="n">features_earth_niigata</span><span class="p">))</span>
+<span class="n">rainfall_inventory_features</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">features_rain_fukuoka</span><span class="p">,</span><span class="n">features_rain_saka</span><span class="p">))</span>
+<span class="n">test_inventory_features</span><span class="o">=</span><span class="n">features_rain_kumamoto</span>
+<span class="n">predict_probability_kumamoto</span><span class="o">=</span><span class="n">classify_inventory_tda</span><span class="p">(</span><span class="n">earthquake_inventory_features</span><span class="p">,</span><span class="n">rainfall_inventory_features</span><span class="p">,</span><span class="n">test_inventory_features</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Visualization of the classification results</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_topological_results</span><span class="p">(</span><span class="n">predict_probability_kumamoto</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/kumamoto_topo.png"><img alt="_images/kumamoto_topo.png" src="_images/kumamoto_topo.png" style="width: 1200px;" /></a>
+<ul class="simple">
+<li><p>Case 5: Fukuoka (Rainfall -triggerd) is a testing inventory</p></li>
+</ul>
+<p>Training the algorithm on rest five inventories and test it on Kumamoto inventory.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earthquake_inventory_features</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">features_earth_hokkaido</span><span class="p">,</span><span class="n">features_earth_iwata</span><span class="p">,</span><span class="n">features_earth_niigata</span><span class="p">))</span>
+<span class="n">rainfall_inventory_features</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">features_rain_kumamoto</span><span class="p">,</span><span class="n">features_rain_saka</span><span class="p">))</span>
+<span class="n">test_inventory_features</span><span class="o">=</span><span class="n">features_rain_fukuoka</span>
+<span class="n">predict_probability_fukuoka</span><span class="o">=</span><span class="n">classify_inventory_tda</span><span class="p">(</span><span class="n">earthquake_inventory_features</span><span class="p">,</span><span class="n">rainfall_inventory_features</span><span class="p">,</span><span class="n">test_inventory_features</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Visualization of the classification results</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_geometric_results</span><span class="p">(</span><span class="n">predict_probability_fukuoka</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/fukuoka_topo.png"><img alt="_images/fukuoka_topo.png" src="_images/fukuoka_topo.png" style="width: 1200px;" /></a>
+<ul class="simple">
+<li><p>Case 6: Saka (Rainfall -triggerd) is a testing inventory</p></li>
+</ul>
+<p>Training the algorithm on rest five inventories and test it on Saka inventory.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earthquake_inventory_features</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">features_earth_hokkaido</span><span class="p">,</span><span class="n">features_earth_iwata</span><span class="p">,</span><span class="n">features_earth_niigata</span><span class="p">))</span>
+<span class="n">rainfall_inventory_features</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">features_rain_kumamoto</span><span class="p">,</span><span class="n">features_rain_fukuoka</span><span class="p">))</span>
+<span class="n">test_inventory_features</span><span class="o">=</span><span class="n">features_rain_saka</span>
+<span class="n">predict_probability_saka</span><span class="o">=</span><span class="n">classify_inventory_tda</span><span class="p">(</span><span class="n">earthquake_inventory_features</span><span class="p">,</span><span class="n">rainfall_inventory_features</span><span class="p">,</span><span class="n">test_inventory_features</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Visualization of the classification results</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_topological_results</span><span class="p">(</span><span class="n">predict_probability_saka</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/iwata_topo.png"><img alt="_images/iwata_topo.png" src="_images/iwata_topo.png" style="width: 1200px;" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="topo_doc.html" class="btn btn-neutral float-left" title="topo_doc module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="references.html" class="btn btn-neutral float-right" title="References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, asa.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

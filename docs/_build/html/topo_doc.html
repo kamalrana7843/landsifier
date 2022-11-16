@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>topo_doc module &mdash; sa saas documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Topological Feature-Based Method Example" href="example_topological.html" />
+    <link rel="prev" title="Image-Based Method Example" href="example_image.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> sa
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geom_doc.html">geom_doc module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_geom.html">Geometric Feature-Based Method Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image_doc.html">image_doc module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_image.html">Image-Based Method Example</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">topo_doc module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_topological.html">Topological Feature-Based Method Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sa</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">topo_doc module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/topo_doc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-topo_doc">
+<span id="topo-doc-module"></span><h1>topo_doc module<a class="headerlink" href="#module-topo_doc" title="Permalink to this headline"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="topo_doc.classify_inventory_tda">
+<span class="sig-prename descclassname"><span class="pre">topo_doc.</span></span><span class="sig-name descname"><span class="pre">classify_inventory_tda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">earthquake_inventory_features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rainfall_inventory_features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_inventory_features</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#topo_doc.classify_inventory_tda" title="Permalink to this definition"></a></dt>
+<dd><p>function to give probability of testing inventory belonging to earthquake and rainfall class</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">earthquake_inventory_features (array_like)</dt>
+<dd class="field-odd"><p>TDA features of known earthquake inventories landslides</p>
+</dd>
+<dt class="field-even">rainfall_inventory_features (array_like)</dt>
+<dd class="field-even"><p>TDA features of known rainfall inventories landslides</p>
+</dd>
+<dt class="field-odd">test_inventory_features (array_like)</dt>
+<dd class="field-odd"><p>TDA features of known testing inventory landslides</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>(array_like) probability of testing inventory landslides belonging to earthquake and rainfall class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="topo_doc.download_dem">
+<span class="sig-prename descclassname"><span class="pre">topo_doc.</span></span><span class="sig-name descname"><span class="pre">download_dem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">poly_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dem_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inventory_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#topo_doc.download_dem" title="Permalink to this definition"></a></dt>
+<dd><p>function to download the DEM corresponding to inventory region</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>:poly_data (str) : landslide polygon data in an inventory</p>
+<dl class="field-list simple">
+<dt class="field-odd">dem_location (str)</dt>
+<dd class="field-odd"><p>provide the path where user wants to download DEM</p>
+</dd>
+<dt class="field-even">inventory_name (str)</dt>
+<dd class="field-even"><p>inventory_name to save the dem file</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>(str) downloaded DEM file location for input landslide inventory</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="topo_doc.get_ml_features">
+<span class="sig-prename descclassname"><span class="pre">topo_doc.</span></span><span class="sig-name descname"><span class="pre">get_ml_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#topo_doc.get_ml_features" title="Permalink to this definition"></a></dt>
+<dd><p>function to get machine learning features from 3D point cloud data</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">data (array_like)</dt>
+<dd class="field-odd"><p>3D point cloud data of landslides</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>topological features corresponding to 3D point cloud data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="topo_doc.make_3d_polygons">
+<span class="sig-prename descclassname"><span class="pre">topo_doc.</span></span><span class="sig-name descname"><span class="pre">make_3d_polygons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">poly_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dem_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inventory_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kk</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#topo_doc.make_3d_polygons" title="Permalink to this definition"></a></dt>
+<dd><p>function to get 3D point cloud from 2D shape of landslide</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">poly_data (str)</dt>
+<dd class="field-odd"><p>polygons shapefile</p>
+</dd>
+<dt class="field-even">dem_location (str)</dt>
+<dd class="field-even"><p>path of dem file</p>
+</dd>
+<dt class="field-odd">inventory_name (str)</dt>
+<dd class="field-odd"><p>path of dem file</p>
+</dd>
+<dt class="field-even">kk (int)</dt>
+<dd class="field-even"><p>kk=1 if user have already DEM corresponding to inventory region otherwise use any other number</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>(array_like) 3D data of landslides</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="topo_doc.min_max_inventory">
+<span class="sig-prename descclassname"><span class="pre">topo_doc.</span></span><span class="sig-name descname"><span class="pre">min_max_inventory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">poly_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_res</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#topo_doc.min_max_inventory" title="Permalink to this definition"></a></dt>
+<dd><p>function to calculate the bounding box coordinates of complete landslide inventory</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">poly_data (str)</dt>
+<dd class="field-odd"><p>landslide polygon data in an inventory</p>
+</dd>
+<dt class="field-even">lon_res (float)</dt>
+<dd class="field-even"><p>longitude resolution</p>
+</dd>
+<dt class="field-odd">lat_res (float)</dt>
+<dd class="field-odd"><p>latitude resolution</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>bounding box coordinates of landslide inventory region</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="topo_doc.plot_topological_results">
+<span class="sig-prename descclassname"><span class="pre">topo_doc.</span></span><span class="sig-name descname"><span class="pre">plot_topological_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predict_proba</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#topo_doc.plot_topological_results" title="Permalink to this definition"></a></dt>
+<dd><p>function to visualize the trigger prediction of landslides in testing inventory</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">predict_proba (array_like)</dt>
+<dd class="field-odd"><p>probability of each landslide in inventory class belonging to earthquake and rainfall class.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>Visualization of landslide probabilities belong to earthquake and rainfall class and trigger prediction of entire landslide 
+inventory</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="topo_doc.read_shapefiles">
+<span class="sig-prename descclassname"><span class="pre">topo_doc.</span></span><span class="sig-name descname"><span class="pre">read_shapefiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#topo_doc.read_shapefiles" title="Permalink to this definition"></a></dt>
+<dd><p>function to read the shapefile from the local file path of landslide inventory</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">path_filename (str)</dt>
+<dd class="field-odd"><p>path to local inventory shapefiles</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>read shapefile from file path</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="example_image.html" class="btn btn-neutral float-left" title="Image-Based Method Example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="example_topological.html" class="btn btn-neutral float-right" title="Topological Feature-Based Method Example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, asa.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

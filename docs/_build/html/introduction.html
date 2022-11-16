@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; sa saas documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Welcome to sa’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> sa
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sample-output-of-each-lmethod">Sample output of each lmethod</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#geometric-feature-based-method">1. Geometric feature based method</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-landslide-polygons">Sample landslide polygons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#geometric-properties-of-landslide-polygon">Geometric properties of landslide polygon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#topological-feature-based-method">2. Topological feature based method</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-3d-landslide-shape">Sample 3D landslide shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coversion-of-2d-landslide-polygons-to-3d-landslide-shape">Coversion of 2D landslide polygons to 3D landslide shape</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#image-based-method">3. Image based method</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-polygon-images">Sample Polygon Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coversion-of-2d-landslide-polygons-to-images">Coversion of 2D landslide polygons to Images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geom_doc.html">geom_doc module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_geom.html">Geometric Feature-Based Method Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image_doc.html">image_doc module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_image.html">Image-Based Method Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topo_doc.html">topo_doc module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_topological.html">Topological Feature-Based Method Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sa</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/introduction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">Landsifier</span></code> is a Python based library to estimate likely triggers of mapped landslides.
+The Beta version of library consitute three machine learning based method for finding the trigger of Landslide inventories.</p>
+<ul class="simple">
+<li><p>Geometric feature based method</p></li>
+<li><p>Topological feature based method</p></li>
+<li><p>Image based method</p></li>
+</ul>
+<section id="sample-output-of-each-lmethod">
+<h2>Sample output of each lmethod<a class="headerlink" href="#sample-output-of-each-lmethod" title="Permalink to this headline"></a></h2>
+<p>The below plot shows the probability of each landslide polygons in testing inventory belonging to earthquake and rainfall-induced class. The majority trigger of
+landslides is the final trigger of the testing inventory.</p>
+<a class="reference internal image-reference" href="_images/sample_output.png"><img alt="_images/sample_output.png" src="_images/sample_output.png" style="width: 1200px;" /></a>
+<section id="geometric-feature-based-method">
+<h3>1. Geometric feature based method<a class="headerlink" href="#geometric-feature-based-method" title="Permalink to this headline"></a></h3>
+<p>This method is based on using 2D landslide polygon geometric properties for classification. This method calculates various geometric properties of landslide polygon and these geometric properties are used as a feature space for machine learning based algorithm.</p>
+</section>
+</section>
+<section id="sample-landslide-polygons">
+<h2>Sample landslide polygons<a class="headerlink" href="#sample-landslide-polygons" title="Permalink to this headline"></a></h2>
+<p>The below plot shows the sample landslide polygons of earthquake and rainfall-induced inventories.</p>
+<a class="reference internal image-reference" href="_images/sample_landslide_polygons.png"><img alt="_images/sample_landslide_polygons.png" src="_images/sample_landslide_polygons.png" style="width: 1200px;" /></a>
+</section>
+<section id="geometric-properties-of-landslide-polygon">
+<h2>Geometric properties of landslide polygon<a class="headerlink" href="#geometric-properties-of-landslide-polygon" title="Permalink to this headline"></a></h2>
+<p>The geometric properties of landslide polygons used are:-</p>
+<ul class="simple">
+<li><p>Area (A) of landslide Polygon</p></li>
+<li><p>Perimetre (P) of Landslide Polygon</p></li>
+<li><p>Ratio of Area (A) to Perimetre(P)</p></li>
+<li><p>Convex hull based measures (Ratio of area of polygon to area of convex hull fitted to polygon)</p></li>
+<li><p>Width of minimum area bounding box fitted to polygon</p></li>
+<li><p>Eccentricity of ellipse fitted to polygon having area A and perimetre P</p></li>
+<li><p>minor-axis of ellipse fitted to polygon having area A and perimetre P</p></li>
+</ul>
+<p>The below plot shows the various geometric properties of landslide polygon</p>
+<a class="reference internal image-reference" href="_images/polygon_properties.png"><img alt="_images/polygon_properties.png" src="_images/polygon_properties.png" style="width: 1200px;" /></a>
+<section id="topological-feature-based-method">
+<h3>2. Topological feature based method<a class="headerlink" href="#topological-feature-based-method" title="Permalink to this headline"></a></h3>
+<p>This method convert 2D landslide polygon to 3D landslide shape by including elevation information.``Landsifier`` library compute topological
+features of 3D landslide shape use topological data analysis. These topological features can be used in machine learning algorithm for landslide triggers
+classification.</p>
+</section>
+</section>
+<section id="sample-3d-landslide-shape">
+<h2>Sample 3D landslide shape<a class="headerlink" href="#sample-3d-landslide-shape" title="Permalink to this headline"></a></h2>
+<p>The below plot shows the sample 3D landslide shape of earthquake and rainfall-induced inventories.</p>
+<a class="reference internal image-reference" href="_images/3dlandslide_samples.png"><img alt="_images/3dlandslide_samples.png" src="_images/3dlandslide_samples.png" style="width: 1200px;" /></a>
+</section>
+<section id="coversion-of-2d-landslide-polygons-to-3d-landslide-shape">
+<h2>Coversion of 2D landslide polygons to 3D landslide shape<a class="headerlink" href="#coversion-of-2d-landslide-polygons-to-3d-landslide-shape" title="Permalink to this headline"></a></h2>
+<p>The below plot shows the method for coversion of 2d landslide polygon to 3D shape.</p>
+<a class="reference internal image-reference" href="_images/conversion2d_to3d.png"><img alt="_images/conversion2d_to3d.png" src="_images/conversion2d_to3d.png" style="width: 1200px;" /></a>
+<section id="image-based-method">
+<h3>3. Image based method<a class="headerlink" href="#image-based-method" title="Permalink to this headline"></a></h3>
+<p>This method convert landslide polygon data to landslide polygon Images. These converted landslide images are used as a input to
+Convolutional Neural Networks for landslide classification.</p>
+</section>
+</section>
+<section id="sample-polygon-images">
+<h2>Sample Polygon Images<a class="headerlink" href="#sample-polygon-images" title="Permalink to this headline"></a></h2>
+<p>The below plot shows the sample landslide polygon Images.</p>
+<a class="reference internal image-reference" href="_images/sample_landslideimages.png"><img alt="_images/sample_landslideimages.png" src="_images/sample_landslideimages.png" style="width: 1200px;" /></a>
+</section>
+<section id="coversion-of-2d-landslide-polygons-to-images">
+<h2>Coversion of 2D landslide polygons to Images<a class="headerlink" href="#coversion-of-2d-landslide-polygons-to-images" title="Permalink to this headline"></a></h2>
+<p>The below plot shows the method for coversion of 2d landslide polygon to grayscale binary images.</p>
+<a class="reference internal image-reference" href="_images/conversion_polygon_toimage.png"><img alt="_images/conversion_polygon_toimage.png" src="_images/conversion_polygon_toimage.png" style="width: 1200px;" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to sa’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, asa.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

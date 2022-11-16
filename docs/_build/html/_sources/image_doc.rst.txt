@@ -1,0 +1,7 @@
+image\_doc module
+=================
+
+.. automodule:: image_doc
+   :members:
+   :undoc-members:
+   :show-inheritance:
